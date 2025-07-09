@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import api from "../api/axios";
 import { Bar } from "react-chartjs-2";
 import {
@@ -80,6 +81,26 @@ export default function DashboardPage() {
     <div className="min-h-screen bg-gray-900 text-white px-4 py-10">
       <div className="max-w-6xl mx-auto">
         <h1 className="text-3xl font-bold mb-8 text-center text-purple-400">Dashboard Laporan</h1>
+        <div className="flex flex-wrap justify-center gap-4 mb-6">
+          <Link
+            to="/drivers"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded shadow"
+          >
+            Driver Management
+          </Link>
+          <Link
+            to="/routes"
+            className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded shadow"
+          >
+            Router Management
+          </Link>
+          <Link
+            to="/transaksi"
+            className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded shadow"
+          >
+            Transaksi Management
+          </Link>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Card 1 */}
